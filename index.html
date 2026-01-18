@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidade Sustentável - Jogo Educativo de Reciclagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body>
+    <!-- Cabeçalho Fixo -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1><i class="fas fa-recycle"></i> Cidade Sustentável</h1>
+                <p class="subtitle">Trabalho de pesquisa e sensibilização para a reciclagem</p>
+            </div>
+            <div class="header-info">
+                <p><i class="fas fa-users"></i> Integrantes: Ryan Costa, Bacar Seidi e Carla Sofia</p>
+                <p><i class="fas fa-user-friends"></i> Equipa: 4EB</p>
+            </div>
+            <button id="somBtn" class="som-btn" title="Ligar/Desligar som">
+                <i class="fas fa-volume-up"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Secção de Apresentação (Visível Inicialmente) -->
+        <section id="apresentacao" class="apresentacao-section">
+            <div class="apresentacao-content">
+                <div class="logo-animado">
+                    <div class="logo-circle">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <div class="logo-particles">
+                        <div class="particle" style="--i:1; --color:#4CAF50;"></div>
+                        <div class="particle" style="--i:2; --color:#FFC107;"></div>
+                        <div class="particle" style="--i:3; --color:#2196F3;"></div>
+                        <div class="particle" style="--i:4; --color:#795548;"></div>
+                        <div class="particle" style="--i:5; --color:#F44336;"></div>
+                    </div>
+                </div>
+                <h2>Bem-vindo à Cidade Sustentável!</h2>
+                <p class="descricao">
+                    Neste jogo educativo, vais aprender a separar corretamente os resíduos e contribuir para uma cidade mais limpa e sustentável. Cada decisão certa reduz a poluição e aproxima-te da meta. Tens o que é preciso para transformar a nossa cidade?
+                </p>
+                
+                <div class="ecopontos-info">
+                    <h3><i class="fas fa-trash-restore"></i> Ecopontos e Suas Funções</h3>
+                    <div class="ecopontos-grid-info">
+                        <div class="ecoponto-info amarelo">
+                            <div class="ecoponto-info-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="ecoponto-info-text">
+                                <h4>Amarelo</h4>
+                                <p>Embalagens de plástico, metal e pacotes de bebidas</p>
+                            </div>
+                        </div>
+                        <div class="ecoponto-info verde">
+                            <div class="ecoponto-info-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="ecoponto-info-text">
+                                <h4>Verde</h4>
+                                <p>Vidro (garrafas, frascos, boiões)</p>
+                            </div>
+                        </div>
+                        <div class="ecoponto-info azul">
+                            <div class="ecoponto-info-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="ecoponto-info-text">
+                                <h4>Azul</h4>
+                                <p>Papel e cartão (jornais, revistas, caixas)</p>
+                            </div>
+                        </div>
+                        <div class="ecoponto-info castanho">
+                            <div class="ecoponto-info-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="ecoponto-info-text">
+                                <h4>Castanho</h4>
+                                <p>Resíduos orgânicos (restos de comida, jardim)</p>
+                            </div>
+                        </div>
+                        <div class="ecoponto-info vermelho">
+                            <div class="ecoponto-info-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="ecoponto-info-text">
+                                <h4>Vermelho</h4>
+                                <p>Pilhas, baterias, medicamentos, eletrodomésticos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instrucoes">
+                    <h3><i class="fas fa-graduation-cap"></i> Como Jogar</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> O jogo está dividido em 5 fases com objetivos progressivos</li>
+                        <li><i class="fas fa-check-circle"></i> Em cada rodada, aparece o nome e a imagem de um resíduo</li>
+                        <li><i class="fas fa-check-circle"></i> Seleciona o ecoponto correto (Amarelo, Verde, Azul, Castanho ou Vermelho)</li>
+                        <li><i class="fas fa-check-circle"></i> Cada acerto aumenta a tua pontuação e reduz a poluição</li>
+                        <li><i class="fas fa-check-circle"></i> Cada erro aumenta a poluição da cidade</li>
+                        <li><i class="fas fa-check-circle"></i> Completa cada fase para desbloquear a seguinte</li>
+                    </ul>
+                </div>
+                
+                <div class="botoes-inicio">
+                    <button id="iniciarJogoBtn" class="btn-iniciar">
+                        <i class="fas fa-play-circle"></i> Novo Jogo
+                    </button>
+                    <button id="continuarJogoBtn" class="btn-continuar" style="display: none;">
+                        <i class="fas fa-play-circle"></i> Continuar Jogo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção do Jogo (Oculta Inicialmente) -->
+        <section id="jogo" class="jogo-section" style="display: none;">
+            <div class="jogo-container">
+                <!-- Painel de Controlo -->
+                <div class="painel-controle">
+                    <div class="controle-extra">
+                        <button id="homeBtn" class="home-btn" title="Voltar ao menu">
+                            <i class="fas fa-home"></i>
+                        </button>
+                        <button id="somBtnJogo" class="som-btn" title="Ligar/Desligar som">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="fase-info">
+                        <h3><i class="fas fa-map-signs"></i> Fase <span id="faseAtual">1</span>/5</h3>
+                        <div class="fase-progresso">
+                            <div class="fase-bar">
+                                <div class="fase-progress" id="faseProgresso"></div>
+                            </div>
+                            <div class="fase-texto" id="faseTexto">0/50 pontos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="placar">
+                        <div class="placar-item">
+                            <h3><i class="fas fa-star"></i> Pontuação</h3>
+                            <div class="valor" id="pontuacao">0</div>
+                        </div>
+                        <div class="placar-item">
+                            <h3><i class="fas fa-recycle"></i> Classificados</h3>
+                            <div class="valor" id="residuosClassificados">0</div>
+                        </div>
+                        <div class="placar-item">
+                            <h3><i class="fas fa-bolt"></i> Precisão</h3>
+                            <div class="valor" id="precisao">100%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Indicador de Poluição -->
+                    <div class="poluicao-container">
+                        <div class="poluicao-header">
+                            <h3><i class="fas fa-smog"></i> Nível de Poluição</h3>
+                            <span class="poluicao-valor" id="poluicaoPercentagem">0%</span>
+                        </div>
+                        <div class="poluicao-bar-container">
+                            <div class="poluicao-bar" id="poluicaoBar">
+                                <div class="poluicao-niveis">
+                                    <span class="nivel-label" style="left: 0%;">Limpa</span>
+                                    <span class="nivel-label" style="left: 25%;">Moderada</span>
+                                    <span class="nivel-label" style="left: 50%;">Poluída</span>
+                                    <span class="nivel-label" style="left: 75%;">Crítica</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="poluicao-status" id="poluicaoStatus">
+                            <i class="fas fa-leaf"></i> Cidade Limpa
+                        </div>
+                    </div>
+                    
+                    <!-- Metas do Jogo -->
+                    <div class="metas-jogo">
+                        <h3><i class="fas fa-bullseye"></i> Meta da Fase</h3>
+                        <div class="meta-detalhe">
+                            <div class="meta-info">
+                                <p><i class="fas fa-trophy"></i> Pontos: <span id="pontuacaoAtual">0</span>/<span id="metaPontuacao">50</span></p>
+                                <div class="meta-bar">
+                                    <div class="meta-progress" id="progressoPontuacao"></div>
+                                </div>
+                            </div>
+                            <div class="meta-info">
+                                <p><i class="fas fa-cloud"></i> Poluição: <span id="poluicaoAtual">0%</span> (máx: <span id="metaPoluicao">50%</span>)</p>
+                                <div class="meta-bar">
+                                    <div class="meta-progress" id="progressoPoluicao"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Área Principal do Jogo -->
+                <div class="jogo-principal">
+                    <div class="residuo-card">
+                        <h2 class="residuo-titulo" id="residuoNome">Resíduo</h2>
+                        <div class="residuo-imagem-container">
+                            <div class="residuo-imagem" id="residuoImagem">
+                                <i class="fas fa-trash-alt placeholder-icon"></i>
+                                <p class="placeholder-text">Clique em Iniciar Jogo para começar</p>
+                            </div>
+                        </div>
+                        <p class="residuo-dica" id="residuoDica">Selecione o ecoponto correto</p>
+                    </div>
+                    
+                    <!-- Ecopontos -->
+                    <div class="ecopontos-container">
+                        <h3><i class="fas fa-trash-restore"></i> Selecione o Ecoponto Correto:</h3>
+                        <div class="ecopontos-grid">
+                            <button class="ecoponto-btn amarelo" data-ecoponto="amarelo">
+                                <i class="fas fa-recycle"></i>
+                                <span>Amarelo</span>
+                            </button>
+                            <button class="ecoponto-btn verde" data-ecoponto="verde">
+                                <i class="fas fa-recycle"></i>
+                                <span>Verde</span>
+                            </button>
+                            <button class="ecoponto-btn azul" data-ecoponto="azul">
+                                <i class="fas fa-recycle"></i>
+                                <span>Azul</span>
+                            </button>
+                            <button class="ecoponto-btn castanho" data-ecoponto="castanho">
+                                <i class="fas fa-recycle"></i>
+                                <span>Castanho</span>
+                            </button>
+                            <button class="ecoponto-btn vermelho" data-ecoponto="vermelho">
+                                <i class="fas fa-recycle"></i>
+                                <span>Vermelho</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Feedback Educativo -->
+                    <div class="feedback-container" id="feedbackContainer">
+                        <div class="feedback-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Informação Educativa</h3>
+                        </div>
+                        <p class="feedback-text" id="feedbackText">
+                            Separa corretamente os resíduos para reduzir a poluição e proteger o ambiente!
+                        </p>
+                    </div>
+                    
+                    <!-- Controlos do Jogo -->
+                    <div class="controlos-jogo">
+                        <button id="proximoResiduoBtn" class="btn-controlo" disabled>
+                            <i class="fas fa-forward"></i> Próximo Resíduo
+                        </button>
+                        <button id="reiniciarJogoBtn" class="btn-controlo reiniciar">
+                            <i class="fas fa-redo"></i> Reiniciar Fase
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal de Confirmação para Voltar ao Menu -->
+        <div id="modalVoltar" class="modal" style="display: none;">
+            <div class="modal-conteudo">
+                <h3><i class="fas fa-home"></i> Voltar ao Menu</h3>
+                <p>Deseja salvar o progresso do jogo atual?</p>
+                <div class="modal-botoes">
+                    <button id="modalSalvar" class="btn-modal">Sim, salvar</button>
+                    <button id="modalNaoSalvar" class="btn-modal">Não, não salvar</button>
+                    <button id="modalCancelar" class="btn-modal cancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de Continuar Jogo Salvo -->
+        <div id="modalContinuar" class="modal" style="display: none;">
+            <div class="modal-conteudo">
+                <h3><i class="fas fa-play-circle"></i> Continuar Jogo</h3>
+                <p>Foi encontrado um jogo salvo. Deseja continuar de onde parou?</p>
+                <div class="modal-botoes">
+                    <button id="modalContinuarSim" class="btn-modal">Sim, continuar</button>
+                    <button id="modalContinuarNao" class="btn-modal">Não, começar novo jogo</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mensagem de Vitória/Derrota -->
+        <div id="mensagemFinal" class="mensagem-final" style="display: none;">
+            <div class="mensagem-conteudo">
+                <i class="fas fa-trophy mensagem-icon"></i>
+                <h2 id="mensagemTitulo">Parabéns!</h2>
+                <p id="mensagemTexto">Conseguiste atingir a pontuação máxima e manter a cidade limpa!</p>
+                <div class="mensagem-resultados">
+                    <div class="resultado-item">
+                        <span class="resultado-label">Pontuação Final:</span>
+                        <span class="resultado-valor" id="pontuacaoFinal">0</span>
+                    </div>
+                    <div class="resultado-item">
+                        <span class="resultado-label">Fase Alcançada:</span>
+                        <span class="resultado-valor" id="faseFinal">1</span>
+                    </div>
+                    <div class="resultado-item">
+                        <span class="resultado-label">Resíduos Classificados:</span>
+                        <span class="resultado-valor" id="residuosFinal">0</span>
+                    </div>
+                </div>
+                <button id="jogarNovamenteBtn" class="btn-mensagem">
+                    <i class="fas fa-play-circle"></i> Jogar Novamente
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mensagem de Conclusão de Fase -->
+        <div id="mensagemFase" class="mensagem-final" style="display: none;">
+            <div class="mensagem-conteudo">
+                <i class="fas fa-flag-checkered mensagem-icon"></i>
+                <h2 id="mensagemFaseTitulo">Fase Concluída!</h2>
+                <p id="mensagemFaseTexto">Parabéns! Conseguiste completar esta fase.</p>
+                <div class="mensagem-resultados">
+                    <div class="resultado-item">
+                        <span class="resultado-label">Pontuação da Fase:</span>
+                        <span class="resultado-valor" id="pontuacaoFase">0</span>
+                    </div>
+                    <div class="resultado-item">
+                        <span class="resultado-label">Poluição Final:</span>
+                        <span class="resultado-valor" id="poluicaoFase">0%</span>
+                    </div>
+                    <div class="resultado-item">
+                        <span class="resultado-label">Precisão:</span>
+                        <span class="resultado-valor" id="precisaoFase">100%</span>
+                    </div>
+                </div>
+                <button id="proximaFaseBtn" class="btn-mensagem">
+                    <i class="fas fa-forward"></i> Próxima Fase
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>Cidade Sustentável &copy; 2026 - Jogo Educativo de Sensibilização Ambiental</p>
+        <p>Desenvolvido para a comunidade escolar | Equipa 4EB</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
